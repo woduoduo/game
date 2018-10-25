@@ -1,0 +1,1 @@
+1.配置数据库连接池后，可以访问本地链接http://localhost:8888/druid/datasource.html查看监控信息

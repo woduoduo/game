@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lingxiu.game.dao.GameDao">
+
+    <resultMap id="game" type="com.lingxiu.game.entity.Game">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="type" column="type"/>
+        <result property="author" column="author"/>
+        <result property="summary" column="summary"/>
+        <result property="memo" column="memo"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+
+    <select id="getById" parameterType="Long" resultMap="game">
+      SELECT * FROM game WHERE id=#{id}
+    </select>
+</mapper>

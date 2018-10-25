@@ -17,4 +17,7 @@
     <select id="getById" parameterType="Long" resultMap="game">
       SELECT * FROM game WHERE id=#{id}
     </select>
+    <select id="getList" resultMap="game">
+        SELECT * FROM game
+    </select>
 </mapper>

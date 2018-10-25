@@ -1,5 +1,6 @@
 package com.lingxiu.game.service;
 
+import com.github.pagehelper.PageInfo;
 import com.lingxiu.game.entity.Game;
 
 /**
@@ -7,4 +8,6 @@ import com.lingxiu.game.entity.Game;
  */
 public interface GameService {
     Game getById(Long id);
+
+    PageInfo<Game> getPage(int currentPage, int pageSize);
 }

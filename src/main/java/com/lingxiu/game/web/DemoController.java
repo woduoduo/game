@@ -40,6 +40,11 @@ public class DemoController {
         return "demo :hello world !" + name + " session：111-" + session + game;
     }
 
+    @RequestMapping("/testPage")
+    public String testPage() {
+        return gameService.getPage(1, 10).toString();
+    }
+
     @RequestMapping(value = "/testRedis", method = RequestMethod.GET)
     public String testRedis(HttpSession httpSession) {
         redisTemplate.opsForValue().set("111", "111");

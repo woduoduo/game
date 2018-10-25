@@ -18,7 +18,7 @@ public class RegistInterceptor implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        log.info("【注册拦截器】");
+        log.info("【注册拦截器】MybatisPageInterceptor");
         registry.addInterceptor(new MybatisPageInterceptor()).addPathPatterns("/**");
     }
 }
